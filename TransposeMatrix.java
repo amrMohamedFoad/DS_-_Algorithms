@@ -1,3 +1,5 @@
+class Solution {
+    
  /*
 	If it's square Matrix then it can be done constant O(1) Space Complexity.
 	otherwise in SC : O(m * n) where m and n are number of rows and columns of given Matrix.
@@ -35,8 +37,10 @@ public int[][] transpose(int[][] A) {
 		}        
     
 		int[][] B = new int[A[0].length][A.length];
-		for (int i=0; i<A.length ; i++) {
-				for (int j=0; j<A[0].length ; j++) {
+        int row = A.length, col = A[0].length;
+
+		for (int j = 0; j < col ; j++) {
+				for (int i = 0; i < row ; i++) {
 						B[j][i] = A[i][j];
 				}
 		}        
@@ -53,4 +57,6 @@ private void transpose_square_matrix(int[][] A) {
 			}
 				col++;
 	}
+}
+    
 }
